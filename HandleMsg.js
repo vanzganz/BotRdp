@@ -125,7 +125,7 @@ module.exports = HandleMsg = async (aruga, message) => {
                 await aruga.joinGroupViaLink(linkgrup)
                       .then(async () => {
                           await aruga.sendText(from, 'Berhasil join grup via link!')
-                          await aruga.sendText(chekgrup.id, `Hai Penghuni sini\nIm 🔰 *BOT ./MrG3P5* 🔰 \nUntuk memunculkan fitur ketik ${prefix}menu`)
+                          await aruga.sendText(chekgrup.id, `Hai Penghuni sini\nIm 🔰 *BOT IRFAN X NINDA* 🔰 \nUntuk memunculkan fitur ketik ${prefix}menu`)
                       })
             } else {
                 let cgrup = await aruga.getAllGroups()
@@ -287,7 +287,7 @@ module.exports = HandleMsg = async (aruga, message) => {
                         hehex += '╠➥ '
                         hehex += response.data.data[i].name.transliteration.id.toLowerCase() + '\n'
                             }
-                        hehex += '╚═〘 🔰 *BOT ./MrG3P5* 🔰 〙'
+                        hehex += '╚═〘 🔰 *BOT IRFAN X NINDA* 🔰 〙'
                     aruga.reply(from, hehex, id)
                 })
             } catch(err) {
@@ -845,7 +845,7 @@ module.exports = HandleMsg = async (aruga, message) => {
                 hehex += '╠➥'
                 hehex += ` @${groupMem[i].id.replace(/@c.us/g, '')}\n`
             }
-            hehex += '╚═〘 *BOT ./MrG3P5* 〙'
+            hehex += '╚═〘 *BOT IRFAN X NINDA* 〙'
             await aruga.sendTextWithMentions(from, hehex)
             break
         case 'botstatus': {
@@ -902,8 +902,8 @@ module.exports = HandleMsg = async (aruga, message) => {
             const chatz = await aruga.getAllChatIds()
             for (let idk of chatz) {
                 var cvk = await aruga.getChatById(idk)
-                if (!cvk.isReadOnly) aruga.sendText(idk, `〘 *BOT ./MrG3P5 B C* 〙\n\n${msg}`)
-                if (cvk.isReadOnly) aruga.sendText(idk, `〘 *BOT ./MrG3P5 B C* 〙\n\n${msg}`)
+                if (!cvk.isReadOnly) aruga.sendText(idk, `〘 *BOT IRFAN X NINDA BROADCAST* 〙\n\n${msg}`)
+                if (cvk.isReadOnly) aruga.sendText(idk, `〘 *BOT IRFAN X NINDA BROADCAST* 〙\n\n${msg}`)
             }
             aruga.reply(from, 'Broadcast Success!', id)
             break
